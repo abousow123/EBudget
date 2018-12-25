@@ -64,6 +64,7 @@ public class Comptebudgetaire implements java.io.Serializable {
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "numcg", nullable = false)
+	@JsonBackReference
 	public Comptegeneral getComptegeneral() {
 		return this.comptegeneral;
 	}
