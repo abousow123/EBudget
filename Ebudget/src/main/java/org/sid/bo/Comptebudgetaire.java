@@ -92,6 +92,7 @@ public class Comptebudgetaire implements java.io.Serializable {
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "comptebudgetaire")
+	@JsonManagedReference
 	public Set<Article> getArticles() {
 		return this.articles;
 	}
